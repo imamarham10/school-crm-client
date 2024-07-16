@@ -47,7 +47,7 @@ const StudentManagement = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/students');
+      const response = await axios.get('https://school-crm-backend.vercel.app/api/students');
       const formattedData = response.data.map(item => ({
         _id: item._id,
         name: item.name,
@@ -66,7 +66,7 @@ const StudentManagement = () => {
 
   const addStudent = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/students', data);
+      await axios.post('https://school-crm-backend.vercel.app/api/students', data);
       fetchStudents();
     } catch (err) {
       console.error('Failed to add student', err);

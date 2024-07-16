@@ -18,7 +18,7 @@ const ExpenseAnalytics = () => {
 
   const fetchAnalyticsData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/analytics/financial', {
+      const response = await axios.get('https://school-crm-backend.vercel.app/api/analytics/financial', {
         params: { view, year, month },
       });
       setAnalyticsData(response.data);
