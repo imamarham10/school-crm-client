@@ -45,7 +45,7 @@ const TeacherManagement = () => {
 
   const fetchTeachers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/teachers');
+      const response = await axios.get('https://school-crm-backend.vercel.app/api/teachers');
       setTeachers(response.data);
     } catch (err) {
       console.error('Failed to fetch teachers', err);
@@ -55,7 +55,7 @@ const TeacherManagement = () => {
 
   const addTeacher = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/teachers', data);
+      await axios.post('https://school-crm-backend.vercel.app/api/teachers', data);
       fetchTeachers();
     } catch (err) {
       console.error('Failed to add teacher', err);

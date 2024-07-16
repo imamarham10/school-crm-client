@@ -48,7 +48,7 @@ const ClassManagement = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/classes');
+      const response = await axios.get('https://school-crm-backend.vercel.app/api/classes');
       const formattedData = response.data.map(item => ({
         _id: item._id,
         name: item.name,
@@ -66,7 +66,7 @@ const ClassManagement = () => {
 
   const addClass = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/classes', data);
+      await axios.post('https://school-crm-backend.vercel.app/api/classes', data);
       fetchClasses();
     } catch (err) {
   
